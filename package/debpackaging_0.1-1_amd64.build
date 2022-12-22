@@ -1,0 +1,85 @@
+ dpkg-buildpackage -us -uc -ui
+dpkg-buildpackage: info: source package debpackaging
+dpkg-buildpackage: info: source version 0.1-1
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by unknown <anvansh@unknown>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean
+   dh_clean
+ dpkg-source -b .
+dpkg-source: info: using source format '3.0 (quilt)'
+dpkg-source: info: building debpackaging using existing ./debpackaging_0.1.orig.tar.xz
+dpkg-source: info: building debpackaging in debpackaging_0.1-1.debian.tar.xz
+dpkg-source: info: building debpackaging in debpackaging_0.1-1.dsc
+ debian/rules build
+dh build
+   dh_update_autotools_config
+   dh_autoreconf
+   create-stamp debian/debhelper-build-stamp
+ fakeroot debian/rules binary
+dh binary
+   dh_testroot
+   dh_prep
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_dwz
+   dh_strip
+   dh_makeshlibs
+   dh_shlibdeps
+   dh_installdeb
+   dh_gencontrol
+dpkg-gencontrol: warning: Depends field of package debpackaging: substitution variable ${shlibs:Depends} used, but is not defined
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'debpackaging' in '../debpackaging_0.1-1_amd64.deb'.
+ dpkg-genbuildinfo
+ dpkg-genchanges  >../debpackaging_0.1-1_amd64.changes
+dpkg-genchanges: info: including full source code in upload
+ dpkg-source --after-build .
+dpkg-buildpackage: info: full upload (original source is included)
+Now running lintian debpackaging_0.1-1_amd64.changes ...
+E: debpackaging changes: bad-distribution-in-changes-file unstable
+E: debpackaging changes: changed-by-address-malformed unknown <anvansh@unknown>
+E: debpackaging: changelog-is-dh_make-template
+E: debpackaging: copyright-contains-dh_make-todo-boilerplate
+E: debpackaging: debian-changelog-file-contains-invalid-email-address anvansh@unknown
+E: debpackaging source: debian-rules-is-dh_make-template
+E: debpackaging: description-is-dh_make-template
+E: debpackaging: helper-templates-in-copyright
+E: debpackaging source: maintainer-address-malformed unknown <anvansh@unknown>
+E: debpackaging: maintainer-address-malformed unknown <anvansh@unknown>
+E: debpackaging source: readme-source-is-dh_make-template
+E: debpackaging: section-is-dh_make-template
+W: debpackaging source: bad-homepage <insert the upstream URL, if relevant>
+W: debpackaging: bad-homepage <insert the upstream URL, if relevant>
+W: debpackaging: binary-without-manpage usr/bin/hello.sh
+W: debpackaging: copyright-has-url-from-dh_make-boilerplate
+W: debpackaging source: dh-make-template-in-source debian/debpackaging.cron.d.ex
+W: debpackaging source: dh-make-template-in-source debian/debpackaging.doc-base.EX
+W: debpackaging source: dh-make-template-in-source debian/manpage.1.ex
+W: debpackaging source: dh-make-template-in-source debian/manpage.sgml.ex
+W: debpackaging source: dh-make-template-in-source debian/manpage.xml.ex
+W: debpackaging source: dh-make-template-in-source debian/postinst.ex
+W: debpackaging source: dh-make-template-in-source debian/postrm.ex
+W: debpackaging source: dh-make-template-in-source debian/preinst.ex
+W: debpackaging source: dh-make-template-in-source debian/prerm.ex
+W: debpackaging source: dh-make-template-in-source debian/salsa-ci.yml.ex
+W: debpackaging source: dh-make-template-in-source debian/watch.ex
+W: debpackaging: executable-not-elf-or-script usr/bin/hello.sh
+W: debpackaging: new-package-should-close-itp-bug
+W: debpackaging: readme-debian-contains-debmake-template
+W: debpackaging: script-with-language-extension usr/bin/hello.sh
+W: debpackaging source: space-in-std-shortname-in-dep5-copyright <special license> (paragraph at line 6)
+W: debpackaging source: superfluous-clutter-in-homepage <insert the upstream URL, if relevant>
+W: debpackaging: superfluous-clutter-in-homepage <insert the upstream URL, if relevant>
+W: debpackaging: wrong-bug-number-in-closes l3:#nnnn
+Finished running lintian.

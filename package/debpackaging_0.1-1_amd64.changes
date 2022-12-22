@@ -1,0 +1,34 @@
+Format: 1.8
+Date: Thu, 22 Dec 2022 12:14:21 +0530
+Source: debpackaging
+Binary: debpackaging
+Architecture: source amd64
+Version: 0.1-1
+Distribution: unstable
+Urgency: medium
+Maintainer: unknown <anvansh@unknown>
+Changed-By: unknown <anvansh@unknown>
+Description:
+ debpackaging - <insert up to 60 chars description>
+Changes:
+ debpackaging (0.1-1) unstable; urgency=medium
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Checksums-Sha1:
+ 74aaa1a49fd73a0772e0059e3a685a5551294af9 845 debpackaging_0.1-1.dsc
+ 7b0711577da3b7f13a7d6ab39df253a6518e5dcc 9436 debpackaging_0.1.orig.tar.xz
+ d353233c1a3ac202377a95210efcb4ce4d2151fe 7888 debpackaging_0.1-1.debian.tar.xz
+ 31afdc2f4a6331df44480b3d4dd67ab248740977 5672 debpackaging_0.1-1_amd64.buildinfo
+ 2fd8514dd1ec16ae86656a7ee04ffe5c6ac70cd6 2424 debpackaging_0.1-1_amd64.deb
+Checksums-Sha256:
+ 45e26342e3bc6006ad5712244ea93df9560544fffc25c76185752e4d6d6e95cd 845 debpackaging_0.1-1.dsc
+ abbf7a53068e74bdaeeab515881dc4def8e7f1745404a658cbb851600a8064b8 9436 debpackaging_0.1.orig.tar.xz
+ 7b7ced2309c1809328e89e8dd96c4e028ac179f52d47edc9e6c1463755371926 7888 debpackaging_0.1-1.debian.tar.xz
+ 867c9b377f0a5fd5400dc1a5dfc9800f1cdd59f7356d525f8f56211687a39ca5 5672 debpackaging_0.1-1_amd64.buildinfo
+ 2f8254f3efe18d10d746179bd8228e11d0b12155de79b9179039c42234aa399a 2424 debpackaging_0.1-1_amd64.deb
+Files:
+ 7ecef39c0f00a5d7606696b8cf11a93e 845 unknown optional debpackaging_0.1-1.dsc
+ f27a137453bb4b922258903b3fff81ef 9436 unknown optional debpackaging_0.1.orig.tar.xz
+ b971a3fbeec033fb59f9196674e5426a 7888 unknown optional debpackaging_0.1-1.debian.tar.xz
+ ab42e2045a8e57ee22d4758c317d2557 5672 unknown optional debpackaging_0.1-1_amd64.buildinfo
+ a6bceabfb3319807ba042600c61b67d9 2424 unknown optional debpackaging_0.1-1_amd64.deb

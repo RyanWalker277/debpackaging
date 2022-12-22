@@ -1,0 +1,5 @@
+debpackaging (0.1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- unknown <anvansh@unknown>  Thu, 22 Dec 2022 12:14:21 +0530
